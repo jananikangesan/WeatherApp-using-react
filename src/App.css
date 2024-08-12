@@ -58,9 +58,57 @@ body{
   text-align: center;
   height: 150px;
   margin-bottom: 10px;
+  
 }
 
 image img{
   width: 100px;
   height: 100px;
+}
+
+.temp,
+.location,
+.country{
+  margin-top: 5px;
+  font-size: 35px;
+  color: #333;
+  text-align:center;
+  text-transform: uppercase;
+}
+
+.temp{
+  font-weight: 500;
+}
+
+.location{
+  color:#ffbc00;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.country{
+  font-size:18px ;
+  color: #888;
+  font-weight: 500;
+}
+
+.cord{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.cord div{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.cord div span{
+  font-size: 14px;
 }
