@@ -11,7 +11,7 @@ import snowIcon from './assets/snow.png';
 import humidityIcon from './assets/humidity.png';
 import { useState } from 'react';
 
-const WeatherDetails=({icon,temp,city,country,lat,log})=>{
+const WeatherDetails=({icon,temp,city,country,lat,log,humidity,wind})=>{
  return(
   <>
     <div className='image'>
@@ -36,6 +36,24 @@ const WeatherDetails=({icon,temp,city,country,lat,log})=>{
             <span>{log}</span>
         </div>
     </div>
+    <div className='data-container'> 
+      <div className='element'>
+        <img src={humidityIcon} alt='humidity' className='icon'/>
+        <div className='data'>
+          <div className='humidity-percent'> {humidity}%</div>
+          <div className='text'>Humidity</div>
+
+        </div>
+      </div>
+      <div className='element'>
+          <img src={windIcon} alt='wind' className='icon'/>
+          <div className='data'>
+            <div className='wind-percent'> {wind} km/h</div>
+            <div className='text'>Wind Speed</div>
+          </div>
+      </div> 
+
+    </div>
   </>
  )
 }
@@ -47,6 +65,8 @@ function App() {
   const [country,setCountry]=useState('INR');
   const [lat,setLat]=useState(0);
   const [log,setLog]=useState(0);
+  const [humidity,setHumidity] =useState(0);
+  const [wind,setWind]=useState(0);
   
   return (
     <>
@@ -58,8 +78,11 @@ function App() {
           </div>
         </div>
 
-        <WeatherDetails icon={icon} temp={temp} city={city} country={country} lat={lat} log={log} />
+        <WeatherDetails icon={icon} temp={temp} city={city} country={country} lat={lat} log={log} humidity={humidity} wind={wind} />
         
+        <p className='copyright'>
+            Designed by <span>Jana</span>
+        </p>
       </div>
     </>
   )

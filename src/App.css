@@ -112,3 +112,44 @@ image img{
 .cord div span{
   font-size: 14px;
 }
+
+.humidity-percent,
+.wind-percent,
+.cord div span:nth-child(2){
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  padding-top: 5px;
+}
+
+.icon{
+  height: 50px;
+  width: 50px;
+}
+
+
+.div-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+
+}
+.element{
+  text-align: center;
+}
+
+
+.text{
+  font-size: 12px;
+  color: #888;
+}
+
+.copyright{
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+}
+
+.copyright span{
+  color: #333;
+}
